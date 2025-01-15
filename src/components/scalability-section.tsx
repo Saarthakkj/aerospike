@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import { Database, Network, Leaf, ArrowRight } from 'lucide-react'
 import Link from "next/link"
 
@@ -11,7 +10,7 @@ export function ScalabilitySection() {
             Infinite scalability, lowest latency, lowest costs
           </h2>
           <p className="text-xl text-gray-600 mb-16">
-            Count on the real-time database that's always on – globally.
+            Count on the real-time database that&apos;s always on – globally.
           </p>
           
           <div className="grid md:grid-cols-3 gap-6">
