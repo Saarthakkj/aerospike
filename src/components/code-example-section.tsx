@@ -129,43 +129,45 @@ export function CodeExampleSection() {
   const [activeTab, setActiveTab] = useState("java")
 
   return (
-    <section className="py-24 bg-[#0B1623] text-white">
-      <div className="container px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-serif mb-8">Multi-model for developers</h2>
-          <p className="text-lg mb-4">
-            Aerospike Graph, utilizing Apache TinkerPop and Gremlin, suits applications that rely on
-            vital data relationships, ensuring easy integration and powerful traversal capabilities.
-          </p>
-          <p className="text-lg mb-8">
-            Support for flexible <span className="text-yellow-400">JSON document models</span> to query support to store, search, and
-            manage complex, hierarchical data sets and workloads.
-          </p>
-          
-          <div className="mt-12 rounded-lg overflow-hidden border border-gray-800">
-            <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-              <TabsList className="w-full justify-start rounded-none border-b border-gray-800 bg-[#1C2834]">
-                {Object.keys(codeExamples).map((lang) => (
-                  <TabsTrigger
-                    key={lang}
-                    value={lang}
-                    className="rounded-none border-b-2 border-transparent data-[state=active]:border-yellow-400 data-[state=active]:bg-[#1C2834]"
-                  >
-                    {lang.charAt(0).toUpperCase() + lang.slice(1)}
-                  </TabsTrigger>
+    <section className="bg-gray-800 text-white p-8 rounded-md">
+      <section className="py-24 bg-[#0B1623] text-white">
+        <div className="container px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-5xl font-serif mb-8">Multi-model for developers</h2>
+            <p className="text-lg mb-4">
+              Aerospike Graph, utilizing Apache TinkerPop and Gremlin, suits applications that rely on
+              vital data relationships, ensuring easy integration and powerful traversal capabilities.
+            </p>
+            <p className="text-lg mb-8">
+              Support for flexible <span className="text-yellow-400">JSON document models</span> to query support to store, search, and
+              manage complex, hierarchical data sets and workloads.
+            </p>
+            
+            <div className="mt-12 rounded-lg overflow-hidden border border-gray-800">
+              <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+                <TabsList className="w-full justify-start rounded-none border-b border-gray-800 bg-[#1C2834]">
+                  {Object.keys(codeExamples).map((lang) => (
+                    <TabsTrigger
+                      key={lang}
+                      value={lang}
+                      className="rounded-none border-b-2 border-transparent data-[state=active]:border-yellow-400 data-[state=active]:bg-[#1C2834]"
+                    >
+                      {lang.charAt(0).toUpperCase() + lang.slice(1)}
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+                {Object.entries(codeExamples).map(([lang, code]) => (
+                  <TabsContent key={lang} value={lang} className="mt-0">
+                    <pre className="p-4 bg-[#0B1623] overflow-x-auto">
+                      <code className="text-sm font-mono text-gray-300">{code}</code>
+                    </pre>
+                  </TabsContent>
                 ))}
-              </TabsList>
-              {Object.entries(codeExamples).map(([lang, code]) => (
-                <TabsContent key={lang} value={lang} className="mt-0">
-                  <pre className="p-4 bg-[#0B1623] overflow-x-auto">
-                    <code className="text-sm font-mono text-gray-300">{code}</code>
-                  </pre>
-                </TabsContent>
-              ))}
-            </Tabs>
+              </Tabs>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </section>
   )
 }

@@ -9,8 +9,8 @@ import {
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[#0B1623] text-white py-16">
-      <div className="container px-4">
+    <footer className="bg-[#0B1623] text-white py-16 text-left">
+      <div className="container px-4 mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-16">
           <div>
             <h3 className="font-semibold mb-4 text-yellow-400">About</h3>
@@ -39,7 +39,7 @@ export function SiteFooter() {
                   2440 W. El Camino Real, Suite 100<br />
                   Mountain View, CA 94040
                 </p>
-                <Button variant="outline" className="mt-4 border-gray-600 text-white hover:bg-gray-800">
+                <Button variant="outline" className="mt-4 border-gray-600 text-black hover:bg-yellow-400">
                   Contact us
                 </Button>
               </div>

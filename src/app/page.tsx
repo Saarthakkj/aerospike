@@ -9,7 +9,6 @@ const CompaniesSection = dynamic(() => import('@/components/companies-section').
   ssr: false,
 })
 import { CodeExampleSection } from "@/components/code-example-section"
-// import { DeveloperSection } from "@/components/developer-section"
 import { ScalabilitySection } from "@/components/scalability-section"
 import { NewsSection } from "@/components/news-section"
 import { SiteFooter } from "@/components/site-footer"
